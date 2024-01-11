@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Image, StatusBar} from 'react-native';
 import styled from 'styled-components/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Tweet from '../../components/Tweet';
 
 const HomeLayout = styled.View`
   flex: 1;
@@ -39,6 +40,7 @@ export default function Home() {
           <Text style={{fontWeight: "bold", fontSize: 20}}>Für dich</Text>
           <Text style={{fontSize: 20}}>Folge ich</Text>
         </ForYouNav>
+        <Tweet/>
    
       </HomeLayout>
     );
