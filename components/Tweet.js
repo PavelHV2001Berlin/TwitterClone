@@ -4,7 +4,10 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 const TweetLayout = styled.View`
     flex-direction: row;
-    margin-horizontal: 10px;
+    padding-horizontal: 10px;
+    padding-vertical: 10px;
+    border-top-width: 0.5px;
+    border-top-color: #ccc;
 `
 const TweetContent = styled.View`
     flex: 1;
@@ -17,12 +20,12 @@ const TweetHeader = styled.View`
 const TweetText = styled.Text`
 
 `
-export default function Tweet(){
+export default function Tweet({username}){
     return <TweetLayout>
         <Image style={{width: 50, height: 50}} source={require('../assets/placeholderimage.png')}/>
         <TweetContent>
             <TweetHeader>
-                <Text style={{fontWeight: "bold", fontSize: 16}}>Mark Manson</Text>
+                <Text style={{fontWeight: "bold", fontSize: 16}}>{username}</Text>
                 <Icon
                     name='gear'
                     size={10}
